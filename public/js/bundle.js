@@ -10187,7 +10187,11 @@ var App = function (_Component) {
           _react2.default.createElement(
             'td',
             null,
-            user.url
+            _react2.default.createElement(
+              'a',
+              { href: 'https://github.com/' + user.login },
+              'https://github.com/' + user.login
+            )
           )
         );
       });
@@ -10195,10 +10199,9 @@ var App = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log('state', this.state.users);
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'container' },
         _react2.default.createElement(
           'h2',
           null,
@@ -10206,7 +10209,7 @@ var App = function (_Component) {
         ),
         this.state.users ? _react2.default.createElement(
           'table',
-          null,
+          { className: 'table table-striped' },
           _react2.default.createElement(
             'thead',
             null,
@@ -10235,7 +10238,11 @@ var App = function (_Component) {
             null,
             this.renderUsers(this.state.users)
           )
-        ) : null
+        ) : _react2.default.createElement(
+          'h5',
+          null,
+          'Loading...'
+        )
       );
     }
   }]);

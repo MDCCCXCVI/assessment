@@ -28,19 +28,18 @@ class App extends Component{
         <tr key={user.id}>
           <td>{user.id}</td>
           <td>{user.login}</td>
-          <td>{user.url}</td>
+          <td><a href={'https://github.com/' + user.login}>{'https://github.com/' + user.login}</a></td>
         </tr>
       )
     })
   }
 
   render() {
-    console.log('state', this.state.users);
     return(
-      <div>
+      <div className="container">
         <h2>Php Users in Nairobi</h2>
         { this.state.users ? (
-          <table>
+          <table className="table table-striped">
             <thead>
               <tr>
                 <th>Id</th>
@@ -52,7 +51,7 @@ class App extends Component{
               { this.renderUsers(this.state.users) }
             </tbody>
           </table>
-        ) : null
+        ) : <h5>Loading...</h5>
         }
       </div>
     );
