@@ -1,0 +1,35 @@
+{
+  "name": "assessment",
+  "version": "1.0.0",
+  "description": "github profiles",
+  "main": "server.js",
+  "scripts": {
+    "start": "webpack && babel-node server.js",
+    "test": "mocha ./test/**/*.spec.js -R spec --compilers js:babel-core/register"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "superagent": "^3.5.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-register": "^6.23.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.7.1",
+    "jsdom": "^9.11.0",
+    "mocha": "^3.2.0",
+    "react-addons-test-utils": "^15.4.2"
+  }
+}
